@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>TorchSig: Coming Soon...</title>
+        <meta name="description" content="TorchSig: A PyTorch Signal Processing Machine Learning Toolkit" />
+        <meta name="author" content="TorchSig Team" />
+        <title>TorchSig: A PyTorch Signals Toolkit</title>
         <!-- Tab icon -->
         <link rel="icon" type="image/x-icon" href="dist/assets/torchsig_icon_dodgerblue_black.png" /> 
-        <!-- Bootstrap icons-->
+        <!-- Bootstrap CSS-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="vendors/linearicons/style.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
 
@@ -21,10 +22,29 @@
             gtag('js', new Date());
             gtag('config', 'G-3KJ4YGZEVG');
         </script>
-        
+
     </head>
+
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><img src="dist/assets/torchsig_icon_dodgerblue_white.png" width="50px" alt=""></a>
+                    <a class="navbar-brand" href="index.html">TorchSig</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="dist/about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="dist/downloads.html">Downloads</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://torchsig.readthedocs.io/en/latest/index.html">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
             <!-- Header-->
             <header class="bg-dark py-5">
                 <div class="container px-5">
@@ -32,18 +52,189 @@
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
                                 <h1 class="display-5 fw-bolder text-white mb-2">TorchSig</h1>
-                                <p class="lead fw-normal text-white-50 mb-4">Coming soon...</p>
+                                <p class="lead fw-normal text-white-50 mb-4">A PyTorch Signal Processing Machine Learning Toolkit</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://torchsig.readthedocs.io/en/latest/index.html">Get Started</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="https://github.com/torchdsp/torchsig">GitHub</a>
+                                </div>
+                                <br>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <iframe src="https://ghbtns.com/github-btn.html?user=torchdsp&repo=torchsig&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="dist/assets/torchsig_logo_white_dodgerblue.png" alt="..." /></div>                    </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="dist/assets/torchsig_logo_white_dodgerblue.png" alt="..." /></div>
+                    </div>
                 </div>
             </header>
 
+
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h2 class="fw-bolder mb-0">Key Features</h2>
+                            <p>
+                                TorchSig is an open-source signal processing machine learning toolkit based on the PyTorch data handling pipeline.
+                                Some of the key features include: signals datasets, domain transforms, pretrained models, and open-source code and documentation for community research and development.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-server"></i>
+                                    </div>
+                                    <h2 class="h5">Signals Datasets</h2>
+                                    <p class="mb-0">TorchSig can generate and easily interface with the Sig53 dataset, an augmentable dataset representing 53 digital modulations commonly used in radio frequency communication signals, and it can be used as a standard in the open source community working with signals datasets.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-wrench"></i>
+                                    </div>
+                                    <h2 class="h5">Domain Transforms</h2>
+                                    <p class="mb-0">Numerous complex signal augmentations, impairments, and expert feature transforms are provided and can be seamlessly customized and further developed.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-cpu"></i>
+                                    </div>
+                                    <h2 class="h5">Pretrained Models</h2>
+                                    <p class="mb-0">TorchSig's API mirrors familiar libraries such as TorchVision and TorchAudio, providing the first ever toolkit that shares state of the art convolutional and transformer neural network models pretrained on complex-valued signals datasets.</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <h2 class="h5">Research & Development</h2>
+                                    <p class="mb-0">Open-source code, datasets, and documentation enable community engagement for further advancing research and development in the field of signal processing machine learning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo section-->
+            <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-xxl-6">
+                            <div class="text-center my-5">
+                                <h1 class="fw-bolder mb-3">Why TorchSig?</h1>
+                                <p class="lead fw-normal text-muted mb-4">
+                                    TorchSig allows you to easily and quickly customize any part of your signal processing pipeline
+                                    ranging from the data management up to the downstream task metric.
+                                    No existing signals toolkit provides such a level of accessibility.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-lg-6">
+                                <h2 class="fw-bolder">Easy to Install</h2>
+                                <p>Simply clone and pip install!</p>
+                            </div>
+                            <div class="col-lg-6" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
+                                <pre><code class="baseh">
+git clone https://github.com/torchdsp/torchsig.git
+cd torchsig
+pip install -r requirements.txt
+pip install --editable .
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-lg-6">
+                                <h2 class="fw-bolder">Easy to Use</h2>
+                                <p>Dataset, model, and transform APIs follow familiar TorchVision and TorchAudio coding structure.</p>
+                            </div>
+                            <div class="col-lg-6" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
+                                <pre><code class="python">
+from torchsig.datasets import Sig53
+sig53_dataset = Sig53()
+
+from torchsig.models import efficientnet_b0
+model = efficientnet_b0()
+
+import torchsig.transforms as ST
+transforms = ST.AddNoise(noise_power_db=10)
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+
+            <!-- Sponsors section-->
+            <section class="bg-white py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Sponsors</h2>
+                            <p>TorchSig is funded and/or developed by the Laboratory for Telecommunication Sceinces and Peraton Labs.</p>
+                        </div>
+                        <div class="col-lg-6" style="text-align:center">
+                            <p style="display:inline-block; padding-right:40px"><a href="https://public.ltsnet.net/">
+                                <img class="img-fluid rounded mb-5 mb-lg-0" src="dist/assets/lts-logo-100px.png" alt="lts"></i> 
+                            </a></p>
+                            <p style="display:inline-block; padding-right:40px"><a href="https://www.peratonlabs.com/">
+                                <img class="img-fluid rounded mb-5 mb-lg-0" src="dist/assets/peratonlabs-logo-square.png" alt="plabs"></i>
+                            </a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+        	<div class="container px-4">
+        		<div class="row footer_inner">
+        			<div class="col-lg-6 col-sm-6 m-0 text-white">
+        				<aside class="f_widget ab_widget">
+        					<div class="f_title">
+        						<h3>About Us</h3>
+        					</div>
+        					<p style="text-align:justify">
+								TorchSig is not a company or an association;
+                    			It is an open-source toolkit created by researchers from the Laboratory for Telecommunication Sciences and Peraton Labs.
+                    			We aim at advancing research and collaboration within the signal processing machine learning field. 
+							</p>
+        					<p>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy; 2019-<script>document.write(new Date().getFullYear());</script></p>
+        				</aside>
+        			</div>
+        			<div class="col-lg-6 col-sm-6 m-0 text-white">
+        				<aside class="f_widget news_widget">
+        					<div class="f_title">
+        						<h3>Opportunities</h3>
+        					</div>
+        					<p>
+								If you are interested in joining our teams, please visit the following:
+							</p>
+                            <li>
+							    Laboratory for Telecommunication Sciences: <a href="https://public.ltsnet.net/careers/">https://public.ltsnet.net/careers/.</a>
+                            </li>
+							<li>
+                                Peraton Labs: <a href="https://www.peratonlabs.com/careers.html">https://www.peratonlabs.com/careers.html.</a>
+                            </li>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
         <!-- Core theme JS-->
-        <script src="dist/js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>

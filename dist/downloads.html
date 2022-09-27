@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="TorchSig: A PyTorch Signal Processing Machine Learning Toolkit" />
+        <meta name="author" content="TorchSig Team" />
+        <title>TorchSig: A PyTorch Signals Toolkit</title>
+        <!-- Tab icon -->
+        <link rel="icon" type="image/x-icon" href="assets/torchsig_icon_dodgerblue_black.png" /> 
+        <!-- Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="vendors/linearicons/style.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KJ4YGZEVG"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3KJ4YGZEVG');
+        </script> 
+        <script type="text/javascript">
+            window.onload = function() {
+                var sig53_dataset = document.getElementById("sig53_dataset");
+                var effnet_b0 = document.getElementById("effnet_b0");
+                var effnet_b2 = document.getElementById("effnet_b2");
+                var effnet_b4 = document.getElementById("effnet_b4");
+                var xcit_nano = document.getElementById("xcit_nano");
+                var xcit_tiny12 = document.getElementById("xcit_tiny12");
+                var large_scale_signal_classification = document.getElementById("large_scale_signal_classification");
+                // Sig53 Dataset Download
+                sig53_dataset.onclick = function () {
+                    // console.log("sig53 dataset download");
+                    gtag('event', 'sig53_dataset_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                // Pretrained models download
+                effnet_b0.onclick = function () {
+                    // console.log("effnet-b0 download");
+                    gtag('event', 'effnetb0_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                effnet_b2.onclick = function () {
+                    // console.log("effnet-b2 download");
+                    gtag('event', 'effnetb2_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                effnet_b4.onclick = function () {
+                    // console.log("effnet-b4 download");
+                    gtag('event', 'effnetb4_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                xcit_nano.onclick = function () {
+                    // console.log("xcit_nano download");
+                    gtag('event', 'xcit_nano_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                xcit_tiny12.onclick = function () {
+                    // console.log("xcit_tiny12 download");
+                    gtag('event', 'xcit_tiny12_download', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+                // Paper download
+                large_scale_signal_classification.onclick = function () {
+                    // console.log("paper download")
+                    gtag('event', 'large_scale_radio_frequency_signal_classification', {
+                     'event_category':'general',
+                     'event_label':'download',
+                    });
+                }
+            }
+        </script>
+
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><img src="assets/torchsig_icon_dodgerblue_white.png" width="50px" alt=""></a>
+                    <a class="navbar-brand" href="index.html">TorchSig</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://torchsig.readthedocs.io/en/latest/index.html">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Header-->
+            <header class="py-5 bg-dark">
+                <div class="container px-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-xxl-6">
+                            <div class="text-center my-5">
+                                <h1 class="fw-bolder mb-3 text-white">TorchSig Downloads</h1>
+                                <p class="lead fw-normal text-muted mb-4">Code, Data, Models, and Papers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h2 class="fw-bolder mb-0">Downloads</h2>
+                            <p>
+                                TorchSig openly shares code, datasets, pretrained models, and publications.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-code"></i>
+                                    </div>
+                                    <h2 class="h5">TorchSig Codebase</h2>
+                                    <p class="mb-0">
+                                        The TorchSig codebase is freely available at our GitHub page: 
+                                        <a href="https://github.com/torchdsp/torchsig" target="_blank">TorchSig GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-server"></i>
+                                    </div>
+                                    <h2 class="h5">Signal Datasets</h2>
+                                    <p class="mb-0">
+                                        The Sig53 signals dataset can be generated after downloading TorchSig. 
+                                        Note: we plan to host the Sig53 dataset for downloading at a future date, 
+                                        but currently it is limited to local generation via TorchSig. 
+                                        <!-- or it can alternatively be downloaded <a id="sig53_dataset" href="" target="_blank">here</a> -->
+                                    </p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-cpu"></i>
+                                    </div>
+                                    <h2 class="h5">Pretrained Models</h2>
+                                    <p class="mb-0">
+                                        TorchSig's model API can automatically reach out and download our models pretrained on the Sig53 dataset, 
+                                        and they are additionally available for download at the below locations:
+                                    </p>
+                                    <ul>
+                                        <li><a id="effnet_b0" href="https://drive.google.com/file/d/1ZQIBRZJiwwjeP4rB7HxxFzFro7RbxihG/view?usp=sharing" target="_blank">EfficientNet-B0</a></li>
+                                        <li><a id="effnet_b2" href="https://drive.google.com/file/d/1yaPZS5bbf6npHfUVdswvUnsJb8rDHlaa/view?usp=sharing" target="_blank">EfficientNet-B2</a></li>
+                                        <li><a id="effnet_b4" href="https://drive.google.com/file/d/1KCoLY5X0rIc_6ArmZRdkxZOOusIHN6in/view?usp=sharing" target="_blank">EfficientNet-B4</a></li>
+                                        <li><a id="xcit_nano" href="https://drive.google.com/file/d/1c347oGdOd2vQD3vzTqKIv1rxXKfW1Ak6/view?usp=sharing" target="_blank">XCiT-Nano</a></li>
+                                        <li><a id="xcit_tiny12" href="https://drive.google.com/file/d/1DKd5E3WwEZxt99qCeSIzvgc1AWEEfdue/view?usp=sharing" target="_blank">XCiT-Tiny12</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-file-earmark"></i>
+                                    </div>
+                                    <h2 class="h5">Publications</h2>
+                                    <ul>
+                                        <li>
+                                            <p class="mb-0">
+                                                <b><a id="large_scale_radio_frequency_signal_classification" href="https://arxiv.org/pdf/2207.09918.pdf" target="_blank">Large Scale Radio Frequency Signal Classification</a><br></b>
+                                                <p class="mb-0">
+                                                    <ul><li><b>Abstract:</b><i> Existing datasets used to train deep learning models for narrowband radio frequency (RF) signal
+                                                        classification lack enough diversity in signal types
+                                                        and channel impairments to sufficiently assess
+                                                        model performance in the real world. We introduce the Sig53 dataset consisting of 5 million
+                                                        synthetically-generated samples from 53 different
+                                                        signal classes and expertly chosen impairments.
+                                                        We also introduce TorchSig, a signals processing machine learning toolkit that can be used to
+                                                        generate this dataset. TorchSig incorporates data
+                                                        handling principles that are common to the vision
+                                                        domain, and it is meant to serve as an open-source
+                                                        foundation for future signals machine learning research. Initial experiments using the Sig53 dataset
+                                                        are conducted using state of the art (SoTA) convolutional neural networks (ConvNets) and Transformers. These experiments reveal Transformers outperform ConvNets without the need for
+                                                        additional regularization or a ConvNet teacher,
+                                                        which is contrary to results from the vision domain. Additional experiments demonstrate that
+                                                        TorchSig's domain-specific data augmentations facilitate model training, which ultimately benefits
+                                                        model performance. Finally, TorchSig supports
+                                                        on-the-fly synthetic data creation at training time,
+                                                        thus enabling massive scale training sessions with
+                                                        virtually unlimited datasets.
+                                                    </i></li></ul>
+                                                </p>
+                                            </p>
+                                        </li>
+                                    <ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-end flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; 2019-<script>document.write(new Date().getFullYear());</script></div></div>
+                </div>
+            </div>
+        </footer>
+            
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
