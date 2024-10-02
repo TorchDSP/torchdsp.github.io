@@ -87,7 +87,7 @@
                                         <i class="bi bi-server"></i>
                                     </div>
                                     <h2 class="h5">Signals Datasets</h2>
-                                    <p class="mb-0">TorchSig can generate and easily interface with the Sig53 dataset, an augmentable dataset representing 53 digital modulations commonly used in radio frequency communication signals, useful for signal classification research. TorchSig can also generate and interface with the WidebandSig53 dataset, a wideband extension to Sig53, containing multiple signals in each data example, useful for signal detection and recognition research. TorchSig can be used as a standard in the open source community working with signals datasets.</p>
+                                    <p class="mb-0">TorchSig can generate and easily interface with the TorchSigNarrowband dataset, an augmentable dataset representing 60+ digital modulations commonly used in radio frequency communication signals, useful for signal classification research. TorchSig can also generate and interface with the TorchSigWideband dataset, a wideband extension to Narrowband, containing multiple signals in each data example, useful for signal detection and recognition research. TorchSig can be used as a standard in the open source community working with signals datasets.</p>
                                 </div>
                                 <div class="col mb-5 h-100">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
@@ -133,33 +133,37 @@
                     </div>
                     <div class="container px-5 my-5">
                         <div class="row gx-5 align-items-center">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <h2 class="fw-bolder">Easy to Install</h2>
                                 <p>Simply clone and pip install!</p>
                             </div>
-                            <div class="col-lg-6" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
+                            <div class="col-lg-8" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
                                 <pre><code class="baseh">
 git clone https://github.com/torchdsp/torchsig.git
 cd torchsig
-pip install -r requirements.txt
-pip install --editable .
+pip install .
                                 </code></pre>
                             </div>
                         </div>
                     </div>
                     <div class="container px-5 my-5">
                         <div class="row gx-5 align-items-center">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <h2 class="fw-bolder">Easy to Use</h2>
                                 <p>Dataset, model, and transform APIs follow familiar TorchVision and TorchAudio coding structure.</p>
                             </div>
-                            <div class="col-lg-6" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
+                            <div class="col-lg-8" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
                                 <pre><code class="python">
-from torchsig.datasets import Sig53
-sig53_dataset = Sig53()
+from torchsig.datasets.datamodules import NarrowbandDataModule
+datamodule = NarrowbandDataModule(root="/workspace/code", impaired=False)
+datamodule.prepare_data() # generates dataset to disk
+datamodule.setup("fit") # creates dataset
+data, label = datamodule.train[0]
 
-from torchsig.models import efficientnet_b0
-model = efficientnet_b0()
+from torchsig.models import EfficientNet1d
+from torchsig.datasets.signal_classes import torchsig_signals
+num_classes = len(torchsig_signals.class_list)
+model = EfficientNet1d(2,num_classes)
 
 import torchsig.transforms as ST
 transforms = ST.AddNoise(noise_power_db=10)
