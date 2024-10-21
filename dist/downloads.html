@@ -24,7 +24,7 @@
         </script> 
         <script type="text/javascript">
             window.onload = function() {
-                var sig53_dataset = document.getElementById("sig53_dataset");
+                var narrowband_dataset = document.getElementById("narrowband_dataset");
                 var effnet_b0 = document.getElementById("effnet_b0");
                 var effnet_b2 = document.getElementById("effnet_b2");
                 var effnet_b4 = document.getElementById("effnet_b4");
@@ -32,9 +32,9 @@
                 var xcit_tiny12 = document.getElementById("xcit_tiny12");
                 var large_scale_signal_classification = document.getElementById("large_scale_signal_classification");
                 // Sig53 Dataset Download
-                sig53_dataset.onclick = function () {
-                    // console.log("sig53 dataset download");
-                    gtag('event', 'sig53_dataset_download', {
+                narrowband_dataset.onclick = function () {
+                    // console.log("narrowband dataset download");
+                    gtag('event', 'narrowband_dataset_download', {
                      'event_category':'general',
                      'event_label':'download',
                     });
@@ -138,8 +138,8 @@
                                     </div>
                                     <h2 class="h5">TorchSig Codebase</h2>
                                     <p class="mb-0">
-                                        The TorchSig codebase is freely available at our GitHub page: 
-                                        <a href="https://github.com/torchdsp/torchsig" target="_blank">TorchSig GitHub</a>
+                                        The TorchSig codebase is available on our
+                                        <a href="https://github.com/torchdsp/torchsig" target="_blank">GitHub</a>.
                                     </p>
                                 </div>
                                 <div class="col mb-5 h-100">
@@ -148,10 +148,10 @@
                                     </div>
                                     <h2 class="h5">Signal Datasets</h2>
                                     <p class="mb-0">
-                                        The Sig53 and Wideband Sig53 signals datasets can be generated after downloading TorchSig. 
-                                        Note: we plan to host these dataset for downloading at a future date, 
-                                        but currently it is limited to local generation via TorchSig. 
-                                        <!-- or it can alternatively be downloaded <a id="sig53_dataset" href="" target="_blank">here</a> -->
+                                        The Narrowband and Wideband signals datasets can be generated after downloading TorchSig. 
+                                        <!-- Note: we plan to host these dataset for downloading at a future date, 
+                                        but currently it is limited to local generation via TorchSig.  -->
+                                        <!-- or it can alternatively be downloaded <a id="narrowband_dataset" href="" target="_blank">here</a> -->
                                     </p>
                                 </div>
                                 <div class="col mb-5 h-100">
@@ -160,14 +160,14 @@
                                     </div>
                                     <h2 class="h5">Pretrained Models</h2>
                                     <p class="mb-0">
-                                        TorchSig's model API can automatically reach out and download our models pretrained on the Sig53 or WBSig53 datasets, 
-                                        and they are additionally available for download at the below locations:
+                                        TorchSig's model API can download models pretrained on the Narrowband or Wideband datasets, 
+                                        and they are additionally available for download below: <b>Under Construction! Please check back on a later release.</b>
                                     </p>
                                     <p></p>
-                                    <p class="mb-0">
+                                    <!-- <p class="mb-0">
                                         Sig53 Pre-Trained Models:
-                                    </p>
-                                    <ul>
+                                    </p> -->
+                                    <!-- <ul>
                                         <li><a id="effnet_b0" href="https://drive.google.com/file/d/1ZQIBRZJiwwjeP4rB7HxxFzFro7RbxihG/view?usp=sharing" target="_blank">EfficientNet-B0</a></li>
                                         <li><a id="effnet_b2" href="https://drive.google.com/file/d/1yaPZS5bbf6npHfUVdswvUnsJb8rDHlaa/view?usp=sharing" target="_blank">EfficientNet-B2</a></li>
                                         <li><a id="effnet_b4" href="https://drive.google.com/file/d/1KCoLY5X0rIc_6ArmZRdkxZOOusIHN6in/view?usp=sharing" target="_blank">EfficientNet-B4</a></li>
@@ -207,70 +207,7 @@
                                         <li><a id="mask2former_b0_mod_family" href="https://drive.google.com/file/d/1eRijUw6zuMvPIHNB4-9NwN3rY_1fFA7i/view?usp=sharing" target="_blank">Mask2Former-B0 Modulation Family</a></li>
                                         <li><a id="mask2former_b2_mod_family" href="https://drive.google.com/file/d/1pKAGMALwc3XBg1l14cYDHNFw2ObtHMnx/view?usp=sharing" target="_blank">Mask2Former-B0 Modulation Family</a></li>
                                         <li><a id="mask2former_b4_mod_family" href="https://drive.google.com/file/d/1-_86eGkTDaq9uykgTEZOo1Gky5ITXLJI/view?usp=sharing" target="_blank">Mask2Former-B0 Modulation Family</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                        <i class="bi bi-file-earmark"></i>
-                                    </div>
-                                    <h2 class="h5">Publications</h2>
-                                    <ul>
-                                        <li>
-                                            <p class="mb-0">
-                                                <b><a id="large_scale_radio_frequency_signal_classification" 
-                                                    href="https://arxiv.org/pdf/2207.09918.pdf" target="_blank">Large Scale Radio Frequency Signal Classification</a><br></b>
-                                                <p class="mb-0">
-                                                    <ul><li><b>Abstract:</b><i> Existing datasets used to train deep learning models for narrowband radio frequency (RF) signal
-                                                        classification lack enough diversity in signal types
-                                                        and channel impairments to sufficiently assess
-                                                        model performance in the real world. We introduce the Sig53 dataset consisting of 5 million
-                                                        synthetically-generated samples from 53 different
-                                                        signal classes and expertly chosen impairments.
-                                                        We also introduce TorchSig, a signals processing machine learning toolkit that can be used to
-                                                        generate this dataset. TorchSig incorporates data
-                                                        handling principles that are common to the vision
-                                                        domain, and it is meant to serve as an open-source
-                                                        foundation for future signals machine learning research. Initial experiments using the Sig53 dataset
-                                                        are conducted using state of the art (SoTA) convolutional neural networks (ConvNets) and Transformers. These experiments reveal Transformers outperform ConvNets without the need for
-                                                        additional regularization or a ConvNet teacher,
-                                                        which is contrary to results from the vision domain. Additional experiments demonstrate that
-                                                        TorchSig's domain-specific data augmentations facilitate model training, which ultimately benefits
-                                                        model performance. Finally, TorchSig supports
-                                                        on-the-fly synthetic data creation at training time,
-                                                        thus enabling massive scale training sessions with
-                                                        virtually unlimited datasets.
-                                                    </i></li></ul>
-                                                </p>
-                                            </p>
-                                        </li>
-
-                                        <li>
-                                            <p class="mb-0">
-                                                <b><a id="large_scale_radio_frequency_wideband_signal_detection_and_recognition" 
-                                                      href="https://arxiv.org/pdf/2211.10335.pdf" target="_blank">Large Scale Radio Frequency Wideband Signal Detection & Recognition</a><br></b>
-                                                <p class="mb-0">
-                                                    <ul><li><b>Abstract:</b><i> The applications of deep learning to the radio frequency (RF) domain 
-                                                        have largely concentrated on the task of narrowband signal classification after assuming the 
-                                                        signals of interest have already been detected and extracted from a wideband capture. 
-                                                        We introduce the WidebandSig53 (WBSig53) dataset consisting of 550 thousand synthetically-generated samples 
-                                                        from 53 different signal classes containing approximately 2 million unique signals. 
-                                                        We extend the TorchSig signals processing machine learning toolkit for open-source and customizable generation,
-                                                        augmentation, and processing of the WBSig53 dataset. Initial experiments using the WBSig53 dataset are conducted
-                                                        using state of the art (SoTA) convolutional neural networks and transformers. 
-                                                        We investigate the performance of signal detection tasks, i.e. 
-                                                        strictly detect the presence, time, and frequency of all signals present in the input data, 
-                                                        as well as the performance of signal recognition tasks, 
-                                                        where networks detect the presence, time, frequency, and modulation family of all signals present in the input data.
-                                                        We evaluate two main approaches to these tasks with segmentation networks and object detection networks 
-                                                        operating on complex input spectrograms. Finally, we conduct comparative analysis of the various approaches 
-                                                        in terms of the networks’ mean average precision scores and the speed of inference.
-                                                    </i></li></ul>
-                                                </p>
-                                            </p>
-                                        </li>
-                            
-
-                                    <ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
