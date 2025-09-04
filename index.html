@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Character encoding for proper text display -->
         <meta charset="utf-8" />
+        <!-- Responsive viewport settings for mobile devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Page description used by search engines and social previews -->
         <meta name="description" content="TorchSig: A PyTorch Signal Processing Machine Learning Toolkit" />
+        <!-- Author information for reference and SEO -->
         <meta name="author" content="TorchSig Team" />
+
+        <!-- Browser tab title -->
         <title>TorchSig: A PyTorch Signals Toolkit</title>
-        <!-- Tab icon -->
+        <!-- Favicon displayed in the browser tab -->
         <link rel="icon" type="image/x-icon" href="dist/assets/torchsig_icon_dodgerblue_black.png" /> 
-        <!-- Bootstrap CSS-->
+        <!-- Bootstrap Icons CSS for scalable vector icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Linearicons CSS for additional icon font options -->
         <link rel="stylesheet" href="vendors/linearicons/style.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
@@ -17,24 +24,71 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KJ4YGZEVG"></script>
         <script>
+            // Initialize dataLayer array if not already defined
             window.dataLayer = window.dataLayer || [];
+            // Define gtag function to push events into dataLayer
             function gtag(){dataLayer.push(arguments);}
+            // Record when the gtag library was loaded
             gtag('js', new Date());
+            // Configure gtag with your Google Analytics tracking ID
             gtag('config', 'G-3KJ4YGZEVG');
         </script>
 
     </head>
 
     <body class="d-flex flex-column h-100">
+        <!--
+            Apply a flexbox column layout that fills the viewport height.
+            d-flex:  enables flexbox on the body.
+            flex-column: stacks children vertically.
+            h-100:     forces 100% height of the viewport.
+        -->
         <main class="flex-shrink-0">
+            <!--
+                Main content container that won’t stretch beyond its intrinsic height,
+                allowing the footer (if any) to stick to the bottom.
+            -->
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <!--
+                    Responsive Bootstrap navbar:
+                    navbar-expand-lg: expands menu on large screens.
+                    navbar-dark bg-dark: dark theme.
+                    sticky-top:  sticks to top on scroll.
+                -->
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><img src="dist/assets/torchsig_icon_dodgerblue_white.png" width="50px" alt=""></a>
+                    <!--
+                        Centers navbar content and adds horizontal padding (px-5).
+                    -->
+                    <!-- Logo icon linking back to home -->
+                    <a class="navbar-brand" href="index.html">
+                        <img 
+                            src="dist/assets/torchsig_icon_dodgerblue_white.png" 
+                            width="50px" 
+                            alt=""
+                        />
+                    </a>
+                    <!-- Brand name text linking to home -->
                     <a class="navbar-brand" href="index.html">TorchSig</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <!-- Mobile menu toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span></button>
+
+                    <!-- Collapsible menu items -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!--
+                                ms-auto: pushes nav links to the right
+                                mb-2 mb-lg-0: bottom margin on small, none on lg+
+                            -->
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="dist/about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="dist/downloads.html">Downloads</a></li>
@@ -47,97 +101,273 @@
 
             <!-- Header-->
             <header class="bg-dark py-5">
+                <!-- 
+                    bg-dark:    dark background
+                    py-5:       vertical padding (top & bottom)
+                -->
                 <div class="container px-5">
+                    <!-- 
+                        centers content and adds horizontal padding
+                        px-5: horizontal padding
+                    -->
                     <div class="row gx-5 align-items-center justify-content-center">
+                        <!-- 
+                            gx-5: horizontal gutters between columns
+                            align-items-center: vertically center columns
+                            justify-content-center: horizontally center columns on small screens
+                        -->
+                    
+                     <!-- Textual content column-->
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
+                                <!-- 
+                                    my-5: vertical margin
+                                    text-center: center text on xs–lg screens
+                                    text-xl-start: left-align on xl+ screens
+                                -->
                                 <h1 class="display-5 fw-bolder text-white mb-2">TorchSig</h1>
+                                <!-- 
+                                    display-5: large display heading
+                                    fw-bolder: extra-bold font weight
+                                    text-white: white text color
+                                    mb-2: bottom margin
+                                -->
                                 <p class="lead fw-normal text-white-50 mb-4">A PyTorch Signal Processing Machine Learning Toolkit</p>
+                                <!-- 
+                                    lead: larger introductory paragraph
+                                    fw-normal: normal font weight
+                                    text-white-50: 50% opacity white
+                                    mb-4: bottom margin
+                                -->
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <!-- 
+                                        d-grid gap-3: stacked buttons with gap on xs
+                                        d-sm-flex: horizontal layout on sm+
+                                        justify-content-sm-center: center on sm
+                                        justify-content-xl-start: left-align on xl+
+                                    -->
                                     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://torchsig.readthedocs.io/en/latest/index.html">Get Started</a>
                                     <a class="btn btn-outline-light btn-lg px-4" href="https://github.com/torchdsp/torchsig">GitHub</a>
                                 </div>
+
                                 <br>
+
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <iframe src="https://ghbtns.com/github-btn.html?user=torchdsp&repo=torchsig&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                                    <!-- GitHub star button embedded via iframe -->
+                                    <iframe 
+                                        src="https://ghbtns.com/github-btn.html?user=torchdsp&repo=torchsig&type=star&count=true&size=large&v=2" 
+                                        frameborder="0" 
+                                        scrolling="0" 
+                                        width="170" 
+                                        height="30" 
+                                        title="GitHub">
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="dist/assets/torchsig_logo_white_dodgerblue.png" alt="..." /></div>
+                        <!-- Image column shown on xl+ screens-->
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <img 
+                            class="img-fluid rounded-3 my-5" 
+                            src="dist/assets/torchsig_logo_white_dodgerblue.png" 
+                            alt="..." />
+                            <!-- 
+                                img-fluid: responsive image
+                                rounded-3: subtle corner rounding
+                                my-5: vertical margin
+                                d-none d-xl-block: hide on < xl, show on xl+
+                            -->
+                        </div>
+                            
                     </div>
                 </div>
             </header>
 
 
-            <!-- Features section-->
+            <!-- Features section -->
             <section class="py-5" id="features">
+                <!--
+                    py-5: adds vertical padding (3rem top & bottom)
+                    id="features": enables in-page linking or navigation
+                -->
                 <div class="container px-5 my-5">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 mb-5 mb-lg-0">
-                            <h2 class="fw-bolder mb-0">Key Features</h2>
-                            <p>
-                                TorchSig is an open-source signal processing machine learning toolkit based on the PyTorch data handling pipeline.
-                                Some of the key features include: signals datasets, domain transforms, pretrained models, and open-source code and documentation for community research and development.
-                            </p>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row gx-5 row-cols-1 row-cols-md-2">
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                        <i class="bi bi-server"></i>
-                                    </div>
-                                    <h2 class="h5">Signals Datasets</h2>
-                                    <p class="mb-0">TorchSig can generate and easily interface with the TorchSigNarrowband dataset, an augmentable dataset representing 60+ digital modulations commonly used in radio frequency communication signals, useful for signal classification research. TorchSig can also generate and interface with the TorchSigWideband dataset, a wideband extension to Narrowband, containing multiple signals in each data example, useful for signal detection and recognition research. TorchSig can be used as a standard in the open source community working with signals datasets.</p>
-                                </div>
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                        <i class="bi bi-wrench"></i>
-                                    </div>
-                                    <h2 class="h5">Domain Transforms</h2>
-                                    <p class="mb-0">Numerous complex signal augmentations, impairments, and expert feature transforms are provided and can be seamlessly customized and further developed.</p>
-                                </div>
-                                <div class="col mb-5 mb-md-0 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                        <i class="bi bi-cpu"></i>
-                                    </div>
-                                    <h2 class="h5">Pretrained Models</h2>
-                                    <p class="mb-0">TorchSig's API mirrors familiar libraries such as TorchVision and TorchAudio, providing the first ever toolkit that shares state of the art convolutional and transformer neural network models pretrained on complex-valued signals datasets.</p>
-                                </div>
-                                <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                        <i class="bi bi-people"></i>
-                                    </div>
-                                    <h2 class="h5">Research & Development</h2>
-                                    <p class="mb-0">Open-source code, datasets, and documentation enable community engagement for further advancing research and development in the field of signal processing machine learning.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!--
+                        container: centers content & applies responsive horizontal padding
+                        px-5: adds 3rem horizontal padding
+                        my-5: adds 3rem vertical margin
+                    -->
+                <div class="row gx-5">
+                    <!--
+                        row: establishes Bootstrap grid row
+                        gx-5: adds horizontal gutters (3rem) between columns
+                    -->
+            
+                    <!-- Left column: section title and description -->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <!--
+                            col-lg-4: spans 4/12 on large+ screens
+                            mb-5: bottom margin 3rem on xs–md
+                            mb-lg-0: removes bottom margin on large+ to align height
+                        -->
+                    <h2 class="fw-bolder mb-0">Key Features</h2>
+                        <!--
+                            fw-bolder: extra-bold font weight
+                            mb-0: removes bottom margin
+                        -->
+                    <p>
+                        TorchSig is an open-source signal processing machine learning toolkit based on the PyTorch data handling pipeline.
+                        Some of the key features include: signals datasets, domain transforms, pretrained models, and open-source code and documentation for community research and development.
+                    </p>
                     </div>
-                </div>
-            </section>
+            
+                    <!-- Right column: individual feature cards -->
+                    <div class="col-lg-8">
+                            <!--
+                                col-lg-8: spans 8/12 on large+ screens
+                            -->
+            
+                    <div class="row gx-4 gy-5">
+                        <!--
+                            Nested row for features
+                            gx-4: horizontal gutters .5rem
+                            gy-5: vertical gutters 3rem
+                        -->
+            
+                        <!-- Feature item 1: Signals Datasets-->
+                        <div class="col-md-6 h-100">
+                            <!--
+                                col-md-6: half-width on medium+ screens
+                                h-100: full height to match siblings
+                            -->
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                            <!--
+                                bg-primary bg-gradient: blue gradient background
+                                text-white: white icon
+                                rounded-3: 1rem border radius
+                                mb-3: bottom margin 1rem
+                            -->
+                            <i class="bi bi-server"></i>
+                            <!-- bi bi-server: Bootstrap “server” icon -->
+                        </div>
 
-            <!-- Demo section-->
+                        <h2 class="h5">Signals Datasets</h2>
+                        <p class="mb-0">
+                            TorchSig can generate 50+ digital modulations commonly used in radio frequency communication signals, useful for signal detection and recognition research. TorchSig can be used as a standard in the open source community working with signals datasets.
+                        </p>
+                        </div>
+            
+                        <!-- Feature item 2:Transforms -->
+                        <div class="col-md-6 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                            <i class="bi bi-wrench"></i>
+                        </div>
+                        <h2 class="h5">Domain Transforms</h2>
+                        <p class="mb-0">
+                            Numerous complex signal augmentations, impairments, and expert feature transforms are provided and can be seamlessly customized and further developed.
+                        </p>
+                        </div>
+            
+                        <!-- Feature item 3: Pretrained Models -->
+                        <div class="col-md-6 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h2 class="h5">Pretrained Models</h2>
+                        <p class="mb-0">
+                            TorchSig’s API mirrors familiar libraries such as TorchVision and TorchAudio, providing the first ever toolkit that shares state-of-the-art convolutional and transformer neural network models pretrained on complex-valued signals datasets.
+                        </p>
+                        </div>
+            
+                        <!-- Feature item 4: Research -->
+                        <div class="col-md-6 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h2 class="h5">Research & Development</h2>
+                        <p class="mb-0">
+                            Open-source code, datasets, and documentation enable community engagement for further advancing research and development in the field of signal processing machine learning.
+                        </p>
+                        </div>
+            
+                    </div> <!-- /.row for feature items -->
+            
+                </div> <!-- /.col-lg-8 -->
+            
+            </div> <!-- /.row -->
+            
+        </div> <!-- /.container -->
+            
+            </section>
+  
+
+            <!-- Demo section: “Why TorchSig?” heading and code examples -->
             <section class="bg-light py-5">
+                <!--
+                    bg-light:    light gray background
+                    py-5:        vertical padding (3rem top & bottom)
+                -->
                 <div class="container px-5">
+                    <!--
+                        container: centers content with responsive padding
+                        px-5: horizontal padding (3rem)
+                    -->
+
+                    <!-- Centered heading row -->
                     <div class="row justify-content-center">
+                        <!--
+                            row: grid row
+                            justify-content-center: center columns horizontally
+                        -->
                         <div class="col-lg-8 col-xxl-6">
+                            <!--
+                                col-lg-8: eight-column width on large+ screens
+                                col-xxl-6: six-column width on extra-extra-large screens
+                            -->
                             <div class="text-center my-5">
+                                <!--
+                                    text-center: center-align text
+                                    my-5: vertical margin (3rem)
+                                -->
                                 <h1 class="fw-bolder mb-3">Why TorchSig?</h1>
+                                <!--
+                                    fw-bolder: heavier font weight
+                                    mb-3: bottom margin (1rem)
+                                -->
                                 <p class="lead fw-normal text-muted mb-4">
-                                    TorchSig allows you to easily and quickly customize any part of your signal processing pipeline
-                                    ranging from the data management up to the downstream task metric.
-                                    No existing signals toolkit provides such a level of accessibility.
+                                    TorchSig is an versatile, open-source, RFML framework that can be leveraged for any application. We are constantly innovating for more capability and features to enable the community for better research. We also love community interactions for new ideas, finding issues, and providing feedback.
                                 </p>
+                                <!--
+                                    lead: larger intro paragraph
+                                    fw-normal: normal font weight
+                                    text-muted: muted (gray) text color
+                                    mb-4: bottom margin (1.5rem)
+                                -->
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Installation example -->
                     <div class="container px-5 my-5">
+                        <!--
+                            Nested container for separation
+                            my-5: vertical margin (3rem)
+                        -->
                         <div class="row gx-5 align-items-center">
+                            <!--
+                                gx-5: horizontal gutters (3rem)
+                                align-items-center: vertical centering
+                            -->
                             <div class="col-lg-4">
                                 <h2 class="fw-bolder">Easy to Install</h2>
                                 <p>Simply clone and pip install!</p>
                             </div>
                             <div class="col-lg-8" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
+                                <!--
+                                    Inline styles:
+                                    background: dark background matching Bootstrap dark
+                                    color: light text
+                                    border-radius: rounded corners
+                                -->
                                 <pre><code class="baseh">
 git clone https://github.com/torchdsp/torchsig.git
 cd torchsig
@@ -146,6 +376,8 @@ pip install .
                             </div>
                         </div>
                     </div>
+
+                    <!-- Usage example -->
                     <div class="container px-5 my-5">
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-4">
@@ -154,20 +386,42 @@ pip install .
                             </div>
                             <div class="col-lg-8" style="display:block; background:#212529;; color:#e9ecef; border-radius: 25px">
                                 <pre><code class="python">
-from torchsig.datasets.datamodules import NarrowbandDataModule
-datamodule = NarrowbandDataModule(root="/workspace/code", impaired=False)
-datamodule.prepare_data() # generates dataset to disk
-datamodule.setup("fit") # creates dataset
-data, label = datamodule.train[0]
+# Datasets
+from torchsig.datasets.dataset_metadata import DatasetMetadata
+from torchsig.datasets.datasets import TorchSigIterableDataset
 
-from torchsig.models import EfficientNet1d
-from torchsig.datasets.signal_classes import torchsig_signals
-num_classes = len(torchsig_signals.class_list)
-model = EfficientNet1d(2,num_classes)
+dataset_infinite_metadata = DatasetMetadata(
+    num_iq_samples_dataset = num_iq_samples_dataset,
+    fft_size = fft_size,
+    impairment_level = impairment_level,
+    num_signals_max = num_signals_max,
+    num_signals_min = num_signals_min,
+    num_samples = None
+)
 
-import torchsig.transforms as ST
-transforms = ST.AddNoise(noise_power_db=10)
+dataset_infinite = TorchSigIterableDataset(
+    dataset_metadata = dataset_infinite_metadata
+)
+data, metadata = next(dataset_infinite)
+
+# Models
+from torchsig.models import XCiTClassifier
+
+model = XCiTClassifier(
+    input_channels=2, # for IQ data
+    num_classes=57,
+)
+
+# Transforms
+from torchsig.transforms.transforms import CarrierPhaseNoise
+transforms = [
+    CarrierPhaseNoise(phase_noise_degrees=(0.25, 1.0)),
+    Spectrogram(fft_size = 64),
+]
                                 </code></pre>
+                                <!--
+                                    class="python": (custom CSS hook for syntax highlighting)
+                                -->
                             </div>
                         </div>
                     </div>
@@ -178,22 +432,57 @@ transforms = ST.AddNoise(noise_power_db=10)
 
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
+            <!--
+                bg-dark: dark background color
+                py-4: vertical padding (1.5rem top & bottom)
+                mt-auto: pushes footer to bottom in a flex column layout
+            -->
         	<div class="container px-4">
+                <!--
+                    container: centers content and applies responsive padding
+                    px-4: horizontal padding (1.5rem)
+                -->
         		<div class="row footer_inner">
+                    <!--
+                        row: Bootstrap grid row
+                        footer_inner: custom class for additional footer styling
+                    -->
         			<div class="col-lg-12 col-sm-6 m-0 text-white">
+                        <!--
+                            col-lg-12: full width on large+ screens
+                            col-sm-6: half width on small screens
+                            m-0: removes all default margin
+                            text-white: white text color
+                        -->
         				<aside class="f_widget ab_widget">
+                            <!--
+                                f_widget, ab_widget: custom widget classes for footer branding or layout
+                            -->
         					<div class="f_title">
         						<h3>About Us</h3>
         					</div>
+                            <!--
+                                f_title: container for widget title styling
+                            -->
         					<p style="text-align:justify">
 								TorchSig is not a company or an association;
                     			It is an open-source toolkit created by researchers from the Laboratory for Telecommunication Sciences and Peraton Labs.
                     			We aim at advancing research and collaboration within the signal processing machine learning field. 
 							</p>
+                            <!--
+                                Inline style:
+                                text-align:justify for even text edges on both sides
+                            -->
         					<p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy; 2019-<script>document.write(new Date().getFullYear());</script></p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy; 2019-
+                                <script>
+                                    // Dynamically writes the current year
+                                    document.write(new Date().getFullYear());
+                                </script>
+                            </p>
         				</aside>
+
         			</div>
         		</div>
         	</div>
@@ -201,8 +490,14 @@ transforms = ST.AddNoise(noise_power_db=10)
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--
+        Includes Bootstrap’s JavaScript bundle (with Popper) for components like modals, dropdowns, and navbar toggling.
+        -->
         
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!--
+            Custom JavaScript for theme-specific interactions or enhancements.
+        -->
     </body>
 </html>
